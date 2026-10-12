@@ -6,13 +6,18 @@ import matplotlib.pyplot as plt
 # dX_{t} = f(X_{t})dt + g(X_{t})dW_{t}
 # using Euler-Marauyama
 
-mu =33./32
+mu = 33./32
 sigma = 1./4
 def f(x):
     return mu*x
 
 def g(x):
     return sigma*x
+
+# this particular choice of f(x)=mu*x and g(x)=sigma*x is called a linear, multiplicative-noise SDE. 
+# It has a strong solution for any mu and sigma and Brownian motion sample W(t), given by 
+# X(t) = X(0) * exp( (mu-sigma^2/2)*t + sigma*W(t) )
+# sometimes called geometric brownian motion
 
 T = 1.0
 N = 1000

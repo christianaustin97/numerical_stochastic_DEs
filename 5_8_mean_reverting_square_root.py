@@ -7,17 +7,24 @@ import matplotlib.pyplot as plt
 # using Euler-Marauyama
 
 # Solving the mean reverting squrae root process
-# The problem has mean at mu, and should always ``come back home'
+
+# This problem is described by Higham and Kloeden in 5.3.1
+
+# The problem has mean at mu, and should always ``come back home''
 # For X0>0, the process will always stay positive since the 
 #   variance terms become small when X approaches 0, provided
 #   2*r*mu > sigma^2
 
-# play around with the initial condition to see different behavior
-X0 = 0.9
+# mu is the mean to which the process reverts to
+# r is the rate at which the process converges to the mean
+# sigma 
 
-r = 1.0
+# play around with the initial condition to see different behavior
+X0 = 5.5
+
+r = 2.5
 mu = 3.0
-sigma = 0.25
+sigma = 0.125
 
 
 # solving the stochastic DE
