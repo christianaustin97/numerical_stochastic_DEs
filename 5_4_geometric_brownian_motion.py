@@ -17,7 +17,10 @@ def g(x):
 # this particular choice of f(x)=mu*x and g(x)=sigma*x is called a linear, multiplicative-noise SDE. 
 # It has a strong solution for any mu and sigma and Brownian motion sample W(t), given by 
 # X(t) = X(0) * exp( (mu-sigma^2/2)*t + sigma*W(t) )
-# sometimes called geometric brownian motion
+# sometimes called geometric Brownian motion
+
+# geometric Brownian motion is frequently used to model stock prices, including in the Black-Sholes-Merton model, 
+# due to its simplicity, but many empirical studies have found better models for stock price
 
 T = 1.0
 N = 1000
